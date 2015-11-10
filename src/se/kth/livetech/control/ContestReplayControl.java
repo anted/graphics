@@ -29,7 +29,19 @@ public class ContestReplayControl implements PropertyListener, ContestUpdateList
 	private int resolveTeamDelay = 0;
 	private boolean showRegionalWinners = false;
 	private Timer timer;
-
+	private final String[] PLACES = {
+				"Unused",
+				"First",
+				"Second",
+				"Third",
+				"Fourth",
+				"Fifth",
+				"Sixth",
+				"Seventh",
+				"Eighth",
+				"Ninth",
+				"Tenth",
+	};
 	public ContestReplayControl(ContestReplayer replayer, IProperty propertyBase) {
 		this.replayer = replayer;
 		this.propertyReplay = propertyBase.get("replay");
@@ -236,7 +248,7 @@ public class ContestReplayControl implements PropertyListener, ContestUpdateList
 		if (winnerString == null || winnerString.length() == 0) {
 			//winnerString = "ICPC 2011 Champions";
 			//winnerString = "ICPC 2012 Champions";
-			winnerString = "ICPC 2013 Champions";
+			winnerString = "CERC 2015 Champions";
 		}
 		if(updateStepCounter) {
 			++stepCounter;
@@ -304,7 +316,11 @@ public class ContestReplayControl implements PropertyListener, ContestUpdateList
 		} else if(resolveRow>1) {
 			showingPresentation = true;
 			System.out.println("Gold medal to team " + team.getId() + " on row " + resolveRow);
-			showWinnerPresentation(team.getId(), "Gold");
+			String awardText = "Gold";
+			if (0 < resolveRow && resolveRow < PLACES.length) {
+				awardText = PLACES[resolveRow] + " place";
+			}
+			showWinnerPresentation(team.getId(), awardText);
 			showGoldMedal(resolveRow);
 			return 5;
 		} else {
