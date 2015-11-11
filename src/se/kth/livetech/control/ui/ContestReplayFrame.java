@@ -60,16 +60,16 @@ public class ContestReplayFrame extends JFrame {
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new JLabel("#Gold"));
 		c.add(new Text(base.get("goldMedals")));
-		c.add(new JLabel("#Silver"));
-		c.add(new Text(base.get("silverMedals")));
-		c.add(new JLabel("#Bronze"));
-		c.add(new Text(base.get("bronzeMedals")));
+		//c.add(new JLabel("#Silver"));
+		//c.add(new Text(base.get("silverMedals")));
+		//c.add(new JLabel("#Bronze"));
+		//c.add(new Text(base.get("bronzeMedals")));
 		b.add(c);
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new IncrementCountButton(base.get("presentationStep"), "Presentation step"));
 		c.add(new IncrementCountButton(base.get("presentationStep"), "+2", 2));
-		c.add(new JLabel("#Blank"));
-		c.add(new Text(base.get("blankMedals")));
+		//c.add(new JLabel("#Blank"));
+		//c.add(new Text(base.get("blankMedals")));
 		b.add(c);
 		c = new Box(BoxLayout.X_AXIS);
 		c.add(new JLabel("Winner label: "));
@@ -80,7 +80,7 @@ public class ContestReplayFrame extends JFrame {
 		b.add(c);
 		c = new Box(BoxLayout.X_AXIS);
 		//c.add(new JLabel("Regional winner screens"));
-		c.add(new CheckBox(base.get("regionalWinners"), "Regional winner screens"));
+		//c.add(new CheckBox(base.get("regionalWinners"), "Regional winner screens"));
 		JButton defaults = new JButton("Defaults");
 		defaults.addActionListener(new ActionListener() {
 			@Override
@@ -88,13 +88,13 @@ public class ContestReplayFrame extends JFrame {
 				base.get("state").setValue("pause");
 				base.get("freezeTime").setIntValue(14400);
 				base.get("untilTime").setIntValue(14400);
-				base.get("replayDelay").setIntValue(100);
+				base.get("replayDelay").setIntValue(1);
 				base.get("resolveTeamDelay").setIntValue(1000);
 				base.get("resolveProblemDelay").setIntValue(1000);
-				base.get("goldMedals").setIntValue(4);
-				base.get("silverMedals").setIntValue(4);
-				base.get("bronzeMedals").setIntValue(4);
-				base.get("regionalWinners").setBooleanValue(true);
+				base.get("goldMedals").setIntValue(10);
+				base.get("silverMedals").setIntValue(0);
+				base.get("bronzeMedals").setIntValue(0);
+				base.get("regionalWinners").setBooleanValue(false);
 			}
 		});
 		c.add(defaults);
