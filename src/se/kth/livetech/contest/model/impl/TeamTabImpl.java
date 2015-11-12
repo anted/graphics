@@ -34,4 +34,8 @@ public class TeamTabImpl extends EntityImpl implements Team {
 	public String getRegion() {
 		return null; // TODO
 	}
+	
+	public String getMembers() {
+		return null;
+	}
 }

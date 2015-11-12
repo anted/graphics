@@ -55,7 +55,7 @@ public class WinnerPresentation extends JPanel implements ContestUpdateListener,
 
 		Rectangle bounds = new Rectangle(0, 0, W, H); //this.getBounds();
 
-		Renderable r = ContentProvider.getAwardRenderable(award, subAward, team.getName(), team);
+		Renderable r = ContentProvider.getAwardRenderable(award, team.getMembers(), team.getName(), team);
 
 		Dimension dim = new Dimension(bounds.width, bounds.height * 7 / 8);
 		int x = (int) (bounds.getCenterX() - dim.width/2);
@@ -147,6 +147,12 @@ public class WinnerPresentation extends JPanel implements ContestUpdateListener,
 
 			@Override
 			public String getRegion() {
+				// TODO Auto-generated method stub
+				return null;
+			}
+
+			@Override
+			public String getMembers() {
 				// TODO Auto-generated method stub
 				return null;
 			}

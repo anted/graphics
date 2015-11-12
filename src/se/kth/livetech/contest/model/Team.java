@@ -9,4 +9,6 @@ public interface Team extends Entity {
 	public String getNationality();
 	
 	public String getRegion();
+	
+	public String getMembers();
 }
