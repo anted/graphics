@@ -288,7 +288,8 @@ public class LiveClient {
 				final LivePresentation lpr = new LivePresentation(c, prop_base, nodeRegistry.getRemoteTime(), fullscreenFrame);
 				contestListeners.add(lpr);
 				//mainComponent("Live", lpr, opts, new Dimension(1024, 576));
-				mainComponent("Live", lpr, opts, new Dimension(1280, 720));
+				//mainComponent("Live", lpr, opts, new Dimension(1280, 720));
+				mainComponent("Live", lpr, opts, new Dimension(1024, 768));
 			}
 			if (opts.isHtmlOutput()) {
 				//final HtmlScoreboardTest htmlOutput = new HtmlScoreboardTest()

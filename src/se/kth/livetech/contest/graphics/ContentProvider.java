@@ -324,13 +324,13 @@ public class ContentProvider {
 		PartitionedRowRenderer r = new PartitionedRowRenderer();
 		//r.setDebug(true);
 		r.add(margin, 1, 1, false, false);
-		r.add(pr, 1, 1, true, false);
+		r.add(pr, 3, 1, false, false);
 		r.add(margin, 1, 1, false, false);
 		ColoredTextBox box2 = new ColoredTextBox(row2Text, ContentProvider.getCountdownStyle());
 		ColoredTextBox box3 = new ColoredTextBox(row3Text, ContentProvider.getCountdownStyle());
-		HorizontalSplitter split1 = new HorizontalSplitter(box1, r, .5);
-		HorizontalSplitter split2 = new HorizontalSplitter(box2, box3, .66);
-		return new HorizontalSplitter(split1, split2, 8/11.0);
+		HorizontalSplitter split1 = new HorizontalSplitter(box1, r, .2);
+		HorizontalSplitter split2 = new HorizontalSplitter(box2, box3, .35);
+		return new HorizontalSplitter(split1, split2, 9/11.0);
 	}
 
 	public static Renderable getFloridaCountdownRenderable(String timeString) {
