@@ -28,7 +28,7 @@ LOGOS = {
     u"Masaryk University": None,
     u"Nicolaus Copernicus University": None,
     u"Pavol Jozef Šafárik University in Košice": "http://hsci2013.info/sitefiles/image/photogallery/201210/logo-upjs-cb.jpg",
-    u"Poznan University of Technology": "http://www.cmwm.put.poznan.pl/sites/default/files/PP_eng.jpg",
+    u"Poznan University of Technology": "http://www.cs.put.poznan.pl/jbrzezinski/data/uploads/logopp-1.png",
     u"Slovak University of Technology in Bratislava": None,
     u"University of Applied Sciences Technikum Wien": "http://www.technikum-wien.at/sites/default/files/logo-300x160.png",
     u"University of Debrecen": None,
